@@ -130,7 +130,6 @@ section{
 	/*padding-bottom: 72px;*/
 	margin-bottom: 72px;
 
-
 }
 .header-small{
 	font-size: 20px;
@@ -141,7 +140,6 @@ section{
     color: var(--color-navy-blue);
 	
 	margin-bottom: 8px;
-    
 }
 .text-body,
 .text-body-footer, 
@@ -150,6 +148,10 @@ section{
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: var(--color-slate);
+	
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .text-body-medium, .text-medium-ftr {
@@ -158,6 +160,11 @@ section{
 	letter-spacing: 0.02em;
 	font-style: normal;
 	color: var(--color-navy-blue); 
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .text-body-medium:hover,
 .text-body-medium:focus,
@@ -165,6 +172,10 @@ section{
 .text-body-adr:focus{
 	color: var(--color-ocean);
 }
+.text-body-medium.active{
+color: #404BBF;
+}
+
 .text-small{
 	font-size: 12px;
 	line-height: 1.17;
@@ -192,8 +203,29 @@ section{
 	margin-right: auto;
 }
 .nav-link{
+	align-items: center;
 	padding: 24px 0;
 }
+.nav-link::after{
+	content: '';
+	
+	display: block;
+	width: auto;
+	
+	height: 4px;
+	left: 0px;
+	border-radius: 2px;	
+
+	margin-top: ;
+	padding-top: ;
+
+}
+
+
+.nav-link.active::after{
+	background: #404BBF;
+	}
+
 .header-container {
 	display: flex;
 	align-items: center;
@@ -201,7 +233,7 @@ section{
 }
 .header-nav-list{
 	display: flex;
-	align-items: center;
+	align-items: ;
 	gap: 40px;
 }
 .header-adr-list{
@@ -250,18 +282,24 @@ section{
 	background-color: var(--color-iris);
 	color: var(--color-white);
 
-		/*font-family: inherit;*/
+	/*font-family: inherit;*/
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.04em;
     text-align: center;
- 	
+
+	/* Для перехода делаем в основном стиле условия */
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .button:hover,
 .button:focus{
 	background-color: var(--color-ocean);
+
 }
 
 /* [type] {} */
@@ -416,6 +454,10 @@ section{
 	border-radius: 50%; /* Делает круг из квадрата*/
 	background-color: var(--color-iris);
 
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .social-icon {
 	fill: var(--color-cloud);
@@ -457,6 +499,11 @@ section{
 	border-radius: 4px; 
 	background-color: none;
 	color: #8E8F99;
+
+	transition-property: border color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .customer-link:hover,
 .customer-link:focus  {
@@ -499,6 +546,11 @@ section{
 	letter-spacing: 0.04em;
 
 	padding: 12px 24px;
+
+	transition-property: color background-color border;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .flrt:hover,
 .flrt:focus{
@@ -534,6 +586,11 @@ section{
 .link-portfolio{
 	display: block;
 	color: inherit;
+
+	transition-property: box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .portfolio-card{
 	border: 1px solid #e7e9fc;
