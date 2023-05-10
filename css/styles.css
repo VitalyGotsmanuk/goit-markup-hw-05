@@ -499,7 +499,6 @@ color: #404BBF;
 	width: 168px;
 	height: 88px;
 	border: 1px solid;
-	border-color: #8E8F99;
 	border-radius: 4px; 
 	color: #8E8F99;
 
@@ -509,7 +508,6 @@ color: #404BBF;
 }
 .customer-link:hover,
 .customer-link:focus  {
-	border-color: var(--color-ocean);
 	color: #404bbf; }
 
 .customer-icon {
@@ -624,6 +622,7 @@ color: #404BBF;
 
 }
 
+/*
 .overlay{
 	
 	position: absolute;
@@ -642,15 +641,15 @@ color: #404BBF;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  
 
-}
+}*/
 
-.portfolio-item:hover .overlay{
-	transform: translateY(0);
-
-}
 
 .overlay-text{
-	top: 0; 
+	position: absolute;
+
+	top: 0;
+	left: 0;
+		
 	font-size: 16px;
 	line-height: 1.5; 
 	letter-spacing: 0.02em;
@@ -664,9 +663,21 @@ color: #404BBF;
 
 	color: var(--color-cloud) ;
 
-}
-/*=====================*/
+	transform: translateY(100%);
 
+	transition-property: transform ;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
+}
+
+.portfolio-item:hover .overlay-text{
+	transform: translateY(0);
+
+}
+
+
+/*=====================*/
 
 
 /* Modal window*/
@@ -736,8 +747,7 @@ color: #404BBF;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  	
-	
-}
+	}
 .modal-close-btn:focus,
 .modal-close-btn:hover {
 	background-color: #404bbf;
