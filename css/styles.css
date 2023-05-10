@@ -70,6 +70,8 @@ a {
  /* Others */
 	--indent: 24px;
 	--items: 3;
+
+	--anime: 250ms cubic-bezier(0.4, 0, 0.2, 1); /*змінна для transition*/
 }
 
 /*Base style*/
@@ -640,7 +642,6 @@ color: #404BBF;
 /* Modal window*/
 
 .backdrop {
-	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -685,5 +686,12 @@ color: #404BBF;
 }
 .modal-close-icon {
 
+
+}
+.is-hidden{
+	/* Тричі приховуємо єлемент! */
+	visibility: hidden; 
+	opacity: 0; /*Елемент прозорий але є на сторінці*/
+	pointer-events: none; /* не можемо на нього клікати, він не заважає єлементам нижче*/
 
 }
