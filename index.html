@@ -26,6 +26,7 @@
    
 </head>
 <body>
+
     <!--Header-->
     <header class="header">
     <div class="header-container container">
@@ -58,7 +59,7 @@
         </address>
     </div>                
     </header>
-    <!--------->
+    <!---------->
 
     <main>
         <!-- 1 Hero -->
@@ -365,7 +366,8 @@
             </div>
         </section>
     </main>
-    <!------------------------------>
+    
+    <!------------>
     <footer class="footer">
     <div class="container footer-container">
         <div class="footer-lft">
@@ -412,11 +414,12 @@
         </div>
     </div>     
     </footer>
+    <!------------>
 
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" data-modal-close>
+        <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#close-icon"></use>
           </svg>
@@ -424,10 +427,9 @@
       </div>
     </div>
 
-    <!-- Ставимо перед закриваючим тегом body 
-           JS including -->
+    <!-- Ставимо перед закриваючим тегом body -->
 
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script> <!-- Скрипт для модального вікна - посилання -->
 
 </body>
 </html>

@@ -219,7 +219,7 @@ color: #404BBF;
 	display: block;
 
 	left: 0px;
-	bottom: 0px;
+	bottom: -1px;
 
 	width: 100%;
 	height: 4px;
@@ -227,7 +227,7 @@ color: #404BBF;
 }
 
 .nav-link.active::after{
-	background: #404BBF;
+	background-color: #404BBF;
 	}
 
 .header-container {
@@ -503,14 +503,14 @@ color: #404BBF;
 	background-color: none;
 	color: #8E8F99;
 
-	transition-property: border color;
+	transition-property: border-color color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .customer-link:hover,
 .customer-link:focus  {
-	border: 1px solid var(--color-ocean);
+	border-color: var(--color-ocean);
 	color: #404bbf; }
 
 .customer-icon {
@@ -649,16 +649,36 @@ color: #404BBF;
 	width: 100%;
 	height: 100%;
 
-	background-color: rgba(46, 47, 66, 0.4) ;	
+	background-color: rgba(46, 47, 66, 0.4) ;
+	
+	opacity: 1;
+	visibility: visible;
+	pointer-events: initial;
+
+	transition-property: visibility opacity;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
+}
+
+
+.backdrop.is-hidden{
+	/* Тричі приховуємо єлемент! */
+	visibility: hidden; 
+	opacity: 0; /*Елемент прозорий але є на сторінці*/
+	pointer-events: none; /* не можемо на нього клікати, він не заважає єлементам нижче*/
 
 }
+
 .modal {
 	position: absolute;
-	
-	top: 80px;
-	left: calc(50% - 204px);
 
-	height: 584px;
+	/*для центрування строго по центру вінка (видимої області)*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	min-height: 584px;
 	width: 408px;
 	border-radius: 4px;
 
@@ -688,10 +708,4 @@ color: #404BBF;
 
 
 }
-.is-hidden{
-	/* Тричі приховуємо єлемент! */
-	visibility: hidden; 
-	opacity: 0; /*Елемент прозорий але є на сторінці*/
-	pointer-events: none; /* не можемо на нього клікати, він не заважає єлементам нижче*/
 
-}
