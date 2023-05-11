@@ -646,10 +646,11 @@ color: #404BBF;
  
 }
 
+/*
 .portfolio-item:focus .overlay-text, 
 .portfolio-item:hover .overlay-text{
 	transform: translateY(0%);
-}
+}*/
 
 /*=====================*/
 
