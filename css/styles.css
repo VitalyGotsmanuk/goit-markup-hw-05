@@ -623,7 +623,6 @@ color: #404BBF;
 
 .overlay-text{
 	position: absolute;
-
 	top: 0;
 	left: 0;
 		
@@ -637,7 +636,6 @@ color: #404BBF;
 	height: 100%;	
 
 	background-color: var(--color-iris);
-
 	color: var(--color-cloud) ;
 
 	transform: translateY(100%);
@@ -651,7 +649,7 @@ color: #404BBF;
 .portfolio-item:hover .overlay-text{ 
 	transform: translateY(0%);
 }
-.portfolio-item:focus .overlay-text{
+.portfolio-item:focus {
 	transform: translateY(0%);
 }
 
