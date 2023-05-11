@@ -646,6 +646,10 @@ color: #404BBF;
  
 }
 
+.portfolio-item:focus .overlay-text{
+	transform: translateY(0%);
+}
+
 /*
 .portfolio-item:focus .overlay-text, 
 .portfolio-item:hover .overlay-text{
