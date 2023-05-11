@@ -499,10 +499,11 @@ color: #404BBF;
 	width: 168px;
 	height: 88px;
 	border: 1px solid;
+	border-color: #8E8F99;
 	border-radius: 4px; 
 	color: #8E8F99;
 
-	transition-property: color, border-color;
+	transition-property: border-color, color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	
@@ -549,7 +550,7 @@ color: #404BBF;
 
 	padding: 12px 24px;
 
-	transition-property: color background-color border;
+	transition-property: color, background-color, border;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -651,8 +652,7 @@ color: #404BBF;
 
 .portfolio-item:hover .overlay-text,
 .portfolio-item:focus .overlay-text{
-	transform: translateY(0);
-
+	transform: translateY(0%);
 }
 
 
